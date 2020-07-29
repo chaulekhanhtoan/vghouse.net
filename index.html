@@ -32,33 +32,118 @@
     <link rel="stylesheet" href="skeleton.css">
 </head>
 <body>
-    <div class="section get-help">
-        <div   div class="container">
-            <h1 class="section-heading">VGmanager V.2.0</h1>
-            <p class="section-description">Hệ thống quản lý công trình tự đông</p>
-            
-            <br>
-            
-            <div class="section-description"> 
-                <div class="row">
-                    <div class="columns">
-                        <label for="LoginEmail">Email :</label>
-                        <input class="u-full-width" type="text"  id="LoginEmail" required >
-                    </div>
-                </div>
-                
-                <div class="row">
-                        <div class="columns">
-                            <label for="Password">Mật khẩu :</label>
-                            <input class="u-full-width" type="password" id="Password" >
-                        </div>
-                    </div>
-                </div>
-            <div >
-                <a class="button button-primary" id="Login" >Đăng nhập</a><br><br>
-                
+    <div   div class="container">
+        <h1 class="section-description">Tên dự án: </h1>
+        <p class="section-description">Hệ thống quản lý công trình tự đông</p>
+        
+        <br>
+        
+        <div class="row">
+            <div class="four columns">
+                <label for="customer-name">Tên khách hàng</label>
+                <input class="u-full-width" type="text" placeholder="Thanh Nguyễn" id="customer-name" readonly="readonly">
             </div>
-            
+            <div class="four columns">
+                <label for="customer-phone">Số điện thoại</label>
+                <input class="u-full-width" type="text" placeholder="012345567" id="customer-phone" readonly="readonly">
+            </div>
+            <div class="four columns">
+                <label for="customer-email">Email</label>
+                <input class="u-full-width" type="email" placeholder="listen@hocexcel.online" id="customer-email" readonly="readonly">
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="six columns">
+                <label for="order-date">Ngày đặt hàng</label>
+                <input class="u-full-width" type="text" placeholder="23/04/2018" id="order-date" readonly="readonly">
+            </div>
+            <div class="six columns">
+                <label for="last-activity-timestamp">Thời gian tương tác lần trước</label>
+                <input class="u-full-width" type="text" placeholder="18/01/2018" id="last-activity-timestamp" readonly="readonly">
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="six columns">
+                <label for="product-name">Tên sản phẩm</label>
+                <input class="u-full-width" type="text" placeholder="Awesome product" id="product-name" readonly="readonly">
+            </div>
+            <div class="six columns">
+                <label for="product-price">Giá trị</label>
+                <input class="u-full-width" type="text" placeholder="600.000" id="product-price" readonly="readonly">
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="two columns">
+                <label for="call-1">Gọi lần 1</label>
+                <select class="u-full-width" id="call-1">
+                    <option value="0">Chưa gọi</option>
+                    <option value="1">Đã gọi</option>
+                </select>
+            </div>
+            <div class="four columns">
+                <label for="status-1">Trạng thái cuộc gọi 1</label>
+                <select class="u-full-width" id="status-1">
+                    <option value=""></option>
+                    <option value="Nhấc máy">Nhấc máy</option>
+                    <option value="Không nhấc máy">Không nhấc máy</option>
+                    <option value="Gọi lại sau">Gọi lại sau</option> 
+                </select>
+            </div>
+            <div class="six columns">
+                <label for="note-1">Ghi chú</label>
+                <textarea class="u-full-width" type="text" placeholder="" id="note-1"></textarea>
+            </div>
+            <div class="row">
+                <div class="two columns">
+                    <label for="call-2">Gọi lần 2</label>
+                    <select class="u-full-width" id="call-2">
+                    <option value="0">Chưa gọi</option>
+                    <option value="1">Đã gọi</option>
+                    </select>
+                </div>
+                <div class="four columns">
+                    <label for="status-2">Trạng thái cuộc gọi 2</label>
+                    <select class="u-full-width" id="status-2">
+                    <option value=""></option>
+                    <option value="Nhấc máy">Nhấc máy</option>
+                    <option value="Không nhấc máy">Không nhấc máy</option>
+                    <option value="Gọi lại sau">Gọi lại sau</option> 
+                    </select>
+                </div>
+                <div class="six columns">
+                    <label for="call-result">Kết quả</label>
+                    <select class="u-full-width" id="call-result">
+                    <option value=""></option>
+                    <option value="Success">Thành công</option>
+                    <option value="Not Success">Không thành công</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="two columns">
+                    <label for="call-3">Gọi lần 3</label>
+                    <select class="u-full-width" id="call-3">
+                    <option value="0">Chưa gọi</option>
+                    <option value="1">Đã gọi</option>
+                    </select>
+                </div>
+                <div class="four columns">
+                    <label for="status-3">Trạng thái cuộc gọi 3</label>
+                    <select class="u-full-width" id="status-3">
+                    <option value=""></option>
+                    <option value="Nhấc máy">Nhấc máy</option>
+                    <option value="Không nhấc máy">Không nhấc máy</option>
+                    <option value="Gọi lại sau">Gọi lại sau</option> 
+                    </select>
+                </div>
+                <div class="six columns">
+                    <label>Xác nhận thông tin</label>
+                    <a class="button button-primary u-full-width confirm-update-lead" href="javascript:void(0);">Xác nhận thông tin</a>
+                </div>
+            </div>
         </div>
     </div>
   
